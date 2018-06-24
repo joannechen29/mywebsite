@@ -1,0 +1,194 @@
+*{ margin: 0;}
+
+
+p { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif}
+
+li{display: inline;
+
+	padding: 0 10px;
+	font-size: 1.3em;
+	font-family: Montserrat, sans-serif;
+    }
+    
+ul{
+    text-align: right;
+    clear:both;
+    width:100%
+    padding-top:50px;
+
+    }
+
+a{
+	color:hsl(200, 4%, 20%);
+	font-size: 0.8em;
+	font:monospace;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+header{padding: 10px;
+	
+	  background-color:rgb(240,240,240);
+	  color: rgb(237, 128, 148);
+	  font-size: 16px;
+	  }
+	  
+header p .name{
+	color:white;
+	font-family: Montserrat;
+	font-weight: normal;
+	font-variant: small-caps;
+	}
+
+#sitename{
+font-size:40px;
+font-family: cursive;
+
+}
+
+p1{
+font-family: "Helvetica Neue";
+font-size:15px;
+color:grey;
+padding:15px;
+
+}
+
+
+#container {float:left;
+	width:100%;
+	background:rgb(240,240,240);
+	padding:40px;
+	box-sizing: border-box;
+	
+	
+
+	}
+	
+	#box{
+	
+	
+	
+	   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+nav{
+	background:rgb(240,240,240);
+		margin:0;
+		padding: 10px;
+	}
+	
+li a:hover{
+    
+    color: rgb(237, 128, 148);
+    font-size: 14px;
+}
+	
+
+
+#content1 {
+	text-align:center;
+	
+
+	padding-top: 10px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+	
+	
+	}
+	
+#content.img{
+width:30%;
+display:block;
+margin-left:auto;
+margin-right:auto;
+
+padding:100px;
+
+}
+
+	
+#content2 {
+/* 
+	text-align: right;
+	width:40%;
+	text-align:center;
+	padding: 20px;
+	
+	height:500px;
+ 
+	color:hsla(200, 4%, 20%, 0.5);
+	 */
+	color: hsla(200, 4%, 20%, 0.75);
+	
+	text-align:center;
+	padding-top: 10px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+	}
+	
+	#content2 p{
+	font-family: Verdana;
+font-weight: lighter;
+	position:center;
+	text-align: left;
+	margin: 10px 90px;
+	padding-bottom: 100px;
+	
+	
+	
+	}
+	
+#content2 h1{
+font-family:cursive;
+padding: 10px;
+
+}
+
+
+.icons {
+	color:rgb(237, 128, 148);
+    font-size: 2.5em;
+    padding: 10px;
+    word-spacing: 20px;
+    
+    overflow: auto;
+}
+.icons a:hover {
+  color:rgb(237, 128, 148);
+    
+}
+
+
+.icons a:active{
+color: #636563;
+
+}
+ 
+
+footer { 
+	background-color:rgba(237, 128, 148, 0.5);
+	text-align: center;
+	padding: 50px 50px;
+	clear:both;
+	color:hsl(200, 4%, 20%);
+}
+footer p{ 
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: underline;
+	padding: 10px;
+	
+	color:hsl(200, 4%, 20%);
+}
+	

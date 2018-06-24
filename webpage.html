@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Joanne Chen-Start the journey</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<link href="fontawesome/webfontswithcss/css/fontawesome-all.css" rel="stylesheet">
+</head>
+
+
+<body>
+	
+	<header>
+		<p id="sitename">
+		Joanne<span class="name">chen</span>
+		</p>
+		<p1>Welcome to my website</p1>
+		
+	</header>
+		<nav>
+			<ul>
+				<li><a href="http://joannechen29.com/index.html"">Home</a></li>
+				<li><a href="http://joannechen29.com/resume.html">Experience</a></li>
+				<li><a href="http://joannechen29.com/project.html">Projects</a></li>
+				<li><a href="http://joannechen29.com/journey.html">Journey</a></li>
+				<li><a href="http://joannechen29.com/contact.html">Contact</a></li>
+			</ul>
+		</nav><!-- end sidebar -->
+	<div id="container">
+	
+	<div id="box">
+		<div id="content1">
+<img src="joannepic.jpg" alt="Me" align="middle" class="center"><br>
+		
+
+		</div><!-- end content 1-->
+		<div id="content2">
+		<h1>About Joanne</h1>
+		
+
+
+<span style="font-size:30px; color: rgb(237, 128, 148);font-family: Verdana;
+font-weight: lighter;" class="txt-rotate" data-period="800" data-rotate="[ &quot;A Creative Thinker.&quot;, &quot;An Insightful Observer.&quot;, &quot;An Outdoor Enthusiastist.&quot;, &quot;created this website from scratch!&quot; ]">
+<span class="wrap">created this </span>
+</span>
+<br>
+
+
+</br>
+
+
+	
+
+		
+		
+			<p>
+			I am currently a junior at Boston University majoring in Hospitality and minoring in Computer Science. <br>
+				A lot of people ask me, “why such a weird combination?”. <br>
+				It is because I love to surround myself in an environment that not only allows me to learn constantly and challenge myself, 
+				but also grow with the people around me. I have a passion for hospitality because I believe it is the most sincere interaction between humans. However, this is also why I’m interested in UX.
+				 UX focuses on the user’s natural experience towards products. By studying both fields, I am able to bring both skills together to create an ultimate customer and user experience. 
+			</p>
+		
+		
+ 		</div><!-- end content2 -->
+	
+	</div>
+	</div><!-- end container -->
+
+	<footer>
+	<div class="icons">
+            <a href="https://www.facebook.com/joanne.chen.313" target="_blank"><i class="fab fa-facebook " aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/joannechen129/" target="_blank"><i class="fab fa-instagram " aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/joanne-c-b3916510b/" target="_blank"><i class="fab fa-linkedin " aria-hidden="true"></i></a>
+            <a href="mailto:joanne01290@gmail.com"><i class="fa fa-envelope " aria-hidden="true"></i></a>    
+        </div>
+	Copyright © 2018 by Yen Chen Chen<br>
+			<p>
+		<a href="http://joannechen29.com/credit.html" >credit</a>
+		</p>
+	</footer><!-- end footer -->
+
+</body>
+
+<script>
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 1000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+</html>
